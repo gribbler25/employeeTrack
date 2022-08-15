@@ -1,7 +1,7 @@
 const express = require("express");
 const db = require("./db/connections");
-
-const apiRoutes = require("./routes/apiRoutes"); //node automatically looks for index.js
+const router = express.Router();
+const apiRoutes = require("./routes/apiRoutes/index.js"); //node automatically looks for index.js
 
 const PORT = process.env.PORT || 3001;
 const app = express();
