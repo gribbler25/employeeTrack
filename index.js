@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
-
-const db = require("./db/connections");
+const db = require("./db"); //auto-looks for the index.js where i'm now calling the queries with sql
+// const db = require("./db/connections");
 const cTable = require("console.table");
 
 const chooseOption = async function () {
@@ -23,14 +23,11 @@ const chooseOption = async function () {
   ]);
   switch (options) {
     case "View all departments":
-      //return cooresponding function
-      break;
+      return viewDepartments();
     case "View all roles":
-      //return cooresponding function
-      break;
+      return viewAllRoles();
     case "View all employees":
-      //return cooresponding function
-      break;
+      return viewAllEmployees();
     case "ADD a department":
       //return cooresponding function
       break;
@@ -47,11 +44,32 @@ const chooseOption = async function () {
 };
 
 //function viewAllDepartments
-//db.query?  with 'router.get'?
+const viewDepartments = async () => {
+  // const sql = `SELECT * FROM department;`;
+  const results = await db.getAllDept();
+  const table = cTable.getTable(results);
+  console.log(table);
+  chooseOption();
+};
 
 //function viewAllRoles
+const viewAllRoles = async () => {
+  const results = await db.getAllRole();
+  const table = cTable.getTable(results);
+  console.log(table);
+  chooseOption();
+};
+
 //function viewAllEmployees
+const viewAllEmployees = async () => {
+  const results = await db.getAllEmployee();
+  const table = cTable.getTable(results);
+  console.log(table);
+  chooseOption();
+};
+
 // function addDepartment
 // function addRole
 // function addEmployee
 // function updateEmpRole
+chooseOption();
