@@ -4,6 +4,8 @@
    This project allows a user to view tables of company data including employees, departments and roles linked to departments.  In it's finished form it will allow user to add and update from the command line on these same tables.
   </br>
   
+  [Screencastify Video Walkthrough](https://drive.google.com/file/d/17PzHk93xSCkptcU8lcavuDI98iMDloFj/view?usp=sharing)
+  
   ## Built with:
   - mysql2
   - node.js
