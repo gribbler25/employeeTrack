@@ -1,7 +1,7 @@
 # employeeTrack
 
 ## Project Description:
-   This project allows a user to view tables of company data including employees, departents and roles linked to departments.  In it's finished form it will allow user to add and update from the command line on these same tables
+   This project allows a user to view tables of company data including employees, departments and roles linked to departments.  In it's finished form it will allow user to add and update from the command line on these same tables.
   </br>
   
   ## Built with:
